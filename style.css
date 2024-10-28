@@ -1,0 +1,116 @@
+body{
+    background-color: #e2e2e2;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.navigation-bar {
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 12%;
+  padding-right: 12%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  background-color: white;
+}
+
+
+
+.liens {
+  display: flex;
+  flex-direction: row;
+  margin-right: 20%;
+}
+
+.liens a{
+  text-decoration: none;
+  color: gray;
+  margin: 0 5%;
+  padding-bottom: 1.5%;
+  font-size: large;
+}
+
+.liens a:hover{
+  transition: 0.03s ease-in-out;
+  color: #926874;
+  border-bottom: 2px solid #926874;
+}
+
+li{
+  list-style: none;
+}
+
+.titre-navBar{
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  margin: 1% 2% 2% 2% ;
+  color: black;
+}
+  
+  html{
+    scroll-behavior: smooth;
+  }
+
+ .container-home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 5px solid white;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 4% 10% ;
+  }
+
+  section.home{
+    height: 100vh;
+    width: 100%;
+    background-image: url('./images-sources/redTech.gif');
+    background-size: cover;
+    background-position: center;
+    opacity: 1;
+  }
+
+  .button-styled{
+    background-color: #926874;
+    color: white;
+    padding: 1% 2%;
+    border: none;
+    border-radius: 20px;
+    font-size: 20px;
+    padding: 3% 8%;
+    margin-top:3%;
+    cursor: pointer;
+    border: 1px solid white;
+
+  }
+
+  .button-styled:hover{
+    background-color: #8f5d6b;
+    transition: 0.1s ease-in-out;
+  }
+
+  .titre-home{
+    font-size: 70px;
+    color: white;
+  }
+  .text-home{
+    font-size: 25px;
+    color: white;
+  }
+
+  h1{
+    font-size: 50px;
+    color: black;
+  }
+  section{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+  }
+
+
