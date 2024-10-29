@@ -64,6 +64,16 @@ li{
     padding: 4% 10% ;
   }
 
+  .container-contact{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: row;
+    border: 5px solid white;
+    padding: 50px;
+    gap: 100px;
+
+  }
   section.home{
     height: 100vh;
     width: 100%;
@@ -73,25 +83,75 @@ li{
     opacity: 1;
   }
 
-  .button-styled{
-    background-color: transparent;
-    color: white;
-    padding: 1% 2%;
-    border: none;
+  section.contact{
+    height: 100vh;
+    width: 100%;
+  }
+
+  .formulaire-contact {
+    padding: 30px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #31004a;
+    width: 25%;
+}
+
+
+input{
+  margin-bottom: 15px;
+  margin-top: 5px;
+  padding: 10px;
+  border: 0.5px solid black;
+  font-size: 18px;
+}
+
+textarea{
+  margin-bottom: 15px;
+  margin-top: 5px;
+  padding: 10px;
+  border: 0.5px solid black;
+  height: 200px;
+  font-size: 18px;
+}
+
+.simple-texte{
+  color: #31004a;
+  font-size: 12px;
+}
+
+.color-button1{
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
+}
+
+.color-button2{
+  background-color: white;
+  color: #31004a;
+  border: 1px solid #31004a;
+}
+
+.color-button2:hover{
+  background-color: #31004a;
+  border: 1px solid white;
+  transition: 0.1s ease-in-out;
+  color: white;
+}
+
+.color-button1:hover{
+  background-color: #31004a;
+  border: 1px solid white;
+  transition: 0.1s ease-in-out;
+  color: white;
+}
+
+  .button-styled{    
     font-size: 20px;
     padding: 3% 8%;
     margin-top:3%;
     cursor: pointer;
-    border: 2px solid white;
-  
-
-  }
-
-  .button-styled:hover{
-    background-color:#6a4c93;
-    border: 2px solid white ;
-    transition: 0.1s ease-in-out;
-    color: white
+    transition: background-color 0.3s ease, border-color 0.3 ease;
   }
 
   .titre-home{
@@ -119,3 +179,39 @@ li{
   text-decoration: none;
   }
 
+  h2{
+    font-size: 30px;
+    color: black;
+    margin-bottom: 20px;
+  }
+
+  label{
+    font-size: 12px;
+    color: black;
+    margin-bottom: 0px;
+    font-weight: 900;
+  }
+
+  .required{
+    color:red;
+    font-weight:bold;
+  }
+
+  .coordonnes{
+    margin: 20px;
+    margin-left: 200px;
+    background-color: lightgray;
+    padding: 70px;
+    border: 1px solid #31004a
+  }
+
+  .mail-adress{
+    color: #31004a;
+    text-decoration:underline;
+    padding-left: 10px;
+  }
+
+  .social-icon{
+    margin-left: 5px;
+    margin-right: 5px;
+  }

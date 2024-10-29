@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hamza Oumeziane - Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.4.1/dist/email.min.js"></script>
+    <script src="script.js"></script>
 </head>
 <body>
 
@@ -16,7 +20,6 @@
         <nav class="liens">
             <a href="#Home">Home</a>
             <a href="#About">About</a>
-            <a href="#Services">Services</a>
             <a href="#Skills">Skills</a>
             <a href="#Contact">Contact</a>
         </nav>        
@@ -26,7 +29,7 @@
         <div class="container-home">
             <h1 class="titre-home">Welcome to My Portfolio!</h1>
             <h3 class="text-home">Discover the journey of my creativity and innovation.</h3>
-            <a class="button-styled" href="#Contact">Discover More</a>
+            <a class="button-styled color-button1" href="#Contact">Discover More</a>
         </div>
         
     </section>
@@ -36,18 +39,53 @@
         
     </section>
 
-    <section class="services" id="Services">
-        <h1>services</h1>
+    <section class="skills" id="Skills">
+        <h1>Skills</h1>
         
     </section>
 
-    <section class="Skills" id="Skills">
-        <h1>Skills</h1>
-       
-    </section>  
 
-    <section class="Contact" id="Contact">
-        <h1>Contact</h1>
+    <section class="contact" id="Contact">
+        <form class="formulaire-contact" id="formulaire-contact" action="https://api.web3forms.com/submit" method="post">
+            <p class="simple-texte">GET IN TOUCH</p>
+            <h2>Contact me!</h2>
+
+            <input type="hidden" name="access_key" value="4e723445-e1e8-4439-bd29-b37d52af4882">
+
+            <label >Name <span class="required">*</span></label>
+            <input type="text" placeholder="Jane Smith" id="name" name="name" required>
+            <label >Email address <span class="required">*</span> </label>
+            <input type="email" placeholder="example@example.com" id="email" name="email" required>
+            <label >Phone number <span class="required">*</span> </label>
+            <input type="tel" placeholder="123 - 456 - 7891" id="phone-number" name="phone-number" required>
+            <label >Message</label>
+            <textarea placeholder="Message" name="message" id="message"></textarea>
+
+            
+            <button type="submit" class="button-styled color-button2" >Submit</button>
+        </form>
+        <div class="coordonnes">
+            <h3>Get in Touch</h3>
+            <i class="fas fa-envelope"></i> <a href="mailto:houmeziane.contact@gmail.com" class="mail-adress">houmeziane.contact@gmail.com</a>
+            <p><i class="fas fa-phone"></i> <a href="tel:+15148025816" class="mail-adress">+1 514 802 5816</a></p>
+
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/hamza-oumeziane/" target="_blank" class="social-icon" title="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/HamzaOumeziane" target="_blank" class="social-icon" title="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.instagram.com/hamza.omz/" target="_blank" class="social-icon" title="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+            <div class="location">
+                <h3>Location</h3>
+                <p><i class="fas fa-map-marker-alt"></i> <a href="https://www.google.com/maps/place/Laval,+QC,+Canada" class="mail-adress" target="_blank">Laval, QC CA</a></p>
+            </div>            
+        </div>
+        
         
     </section>
     
