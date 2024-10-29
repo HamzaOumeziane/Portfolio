@@ -77,7 +77,7 @@ li{
   section.home{
     height: 100vh;
     width: 100%;
-    background-image: url('./images-sources/giphy.gif');
+    background-image: url('./src/giphy.gif');
     background-size: cover;
     background-position: center;
     opacity: 1;
@@ -214,4 +214,12 @@ textarea{
   .social-icon{
     margin-left: 5px;
     margin-right: 5px;
+  }
+
+  .short-button{
+    padding: 10px 20px;
+    font-size: 16px;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
   }
