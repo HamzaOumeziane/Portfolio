@@ -35,7 +35,54 @@
     </section>
 
     <section class="about" id="About">
-        <h1>about</h1>
+        <div class="container-about">
+            <div class="row-about">
+                <div class="about-col1">
+                    <img src="./src/picture-about.png" alt="Hamza Oumeziane" class="photo-about">
+                </div>
+                <div class="about-col2">
+                    <h1 class="title-about">About Me</h1>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere fuga exercitationem 
+                        eligendi sunt maiores ducimus, eaque reprehenderit distinctio cum repellat quisquam animi 
+                        voluptatem adipisci ut repellendus aliquam enim doloribus ratione?
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere fuga exercitationem 
+                        eligendi sunt maiores ducimus, eaque reprehenderit distinctio cum repellat quisquam animi 
+                        voluptatem adipisci ut repellendus aliquam enim doloribus ratione?</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="openTab(0)">Skills</p>
+                        <p class="tab-links" onclick="openTab(1)">Experience</p>
+                        <p class="tab-links" onclick="openTab(2)">Education</p>
+                    </div>
+
+                    <div class="tab-contents active-content" id="skills">
+                        <ul>
+                            <li><span>Programming</span><br> Java, Python, C#, JavaScript</li>
+                            <li><span>Web Application</span><br>Back-end, Front-end</li>
+                            <li><span>Mobile Application</span> <br>Android, iOS</li>
+                            <li><span>Database</span><br> MySQL, MongoDB, Oracle</li>
+                        </ul>
+                        <!-- Ajouter des icones pour scroll vers left or right avec des logos -->
+                    </div>
+
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>Academic Tutor</span><br> Collège de Bois-de-Boulogne <span style="font-size: 12px; color: lightgray;">(Sept.2023 - Now)</span></li>
+                            <li><span>Technical Debugger</span><br>Collège de Bois-de-Boulogne <span style="font-size: 12px; color: lightgray;">(Nov.2023 - June.2024)</span></li>
+                            <li><span>Merchandise Attendant</span> <br>Browns Shoes <span style="font-size: 12px; color: lightgray;">(Sept.2022 - Now)</span></li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>DEC en technique informatique (Génie Logiciel)</span><br> Collège de Bois-de-Boulogne, QC, CA <span style="font-size: 12px; color: lightgray;">(2022 - 2025)</span></li>
+                            <li><span>Diplôme d'études secondaires</span><br>Lycée Mahmoud Mentouri, ALG <span style="font-size: 12px; color: lightgray;">(2019 - 2022)</span></li>
+                        </ul>
+                    </div>
+                
+                </div>
+                    
+            </div>
+        </div>
         
     </section>
 

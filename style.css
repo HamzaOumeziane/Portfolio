@@ -74,7 +74,7 @@ li{
     gap: 100px;
 
   }
-  section.home{
+  section.home, section.about{
     height: 100vh;
     width: 100%;
     background-image: url('./src/giphy.gif');
@@ -87,6 +87,7 @@ li{
     height: 100vh;
     width: 100%;
   }
+
 
   .formulaire-contact {
     padding: 30px;
@@ -214,6 +215,7 @@ textarea{
   .social-icon{
     margin-left: 5px;
     margin-right: 5px;
+    color: #31004a;
   }
 
   .short-button{
@@ -233,3 +235,113 @@ textarea{
     bottom: 0;
     width: 100%;
   }
+
+  .row-about{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .about-col1, .about-col2{
+    margin-top: 7%;
+    box-sizing: border-box;
+    display: flex;
+    min-height: 100%;
+    flex-direction: column;
+  }
+
+  .about-col1{
+    flex-basis: 35%;
+    margin-left: 5%;
+  }
+  .about-col2{
+    flex-basis: 55%;
+    padding: 2% 3%; margin-right: 3%;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 25px;
+    border: 3px solid #d51d81;
+  }
+  
+
+  .photo-about{
+    width: 100%;
+    border: 5px solid #d51d81;
+    border-radius: 50px;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+  }
+
+  .container-about{
+    border-top: 10px solid white;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    border: 1px solid gray;
+  }
+
+  .title-about{
+    font-size: 60px;
+    color: white;
+    margin-bottom: 20px;
+  }
+
+  .tab-titles{
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    list-style: none;
+    gap: 5%;
+  }
+
+  .tab-links{
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+  }
+
+  .tab-links::after{
+    content: "";
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background-color: #d51d81;
+    transition: 0.3s ease;
+  }
+
+  .tab-links.active-link::after{
+    color: #d51d81;
+    width: 50%;
+    border-bottom: 1px solid #d51d81;
+    visibility: visible;
+  }
+
+  .tab-contents ul li{
+    font-size: 16px;
+    margin-bottom: 3%;
+    list-style: none;
+    color: lightgray;
+  }
+
+  .tab-contents ul li span{
+    color: #d51d81;
+    font-size: 18px;
+  }
+
+  .tab-contents{
+    display: none;
+  }
+
+  .tab-contents.active-content{
+    display: block;
+  }
+
+  
+
+  
