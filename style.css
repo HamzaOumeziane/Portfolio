@@ -352,6 +352,8 @@ textarea{
   }
   .skill-icons{
     display: flex;
+    align-items: center;
+    justify-content: center;
     gap: 15px;
     margin-top: 15px;
     background-color: lightgray;
@@ -360,8 +362,8 @@ textarea{
   }
 
   .skill-icons img{
-    width: 25px;
-    height: auto;
+    width: 30px;
+    height: 30px;
   }
 
   .skill-text span{
@@ -372,6 +374,9 @@ textarea{
     width: 35%;
   }
 
+  #mongodb, #oracle{
+    width: 50px
+  }
 
 .coming-soon-container {
     text-align: center;
