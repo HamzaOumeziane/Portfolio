@@ -1,4 +1,26 @@
+const applyTranslation = (language) => {
+    document.querySelectorAll("[data-key]").forEach(element => {
+        const key = element.getAttribute("data-key");
+        const keys = key.split(".");
+        let text = languages[language];
 
+        keys.forEach(k => {
+            text = text[k];
+        });
+
+        if (text) {
+            if (element.tagName.toLowerCase() === "input" || element.tagName.toLowerCase() === "textarea") {
+                element.placeholder = text;
+            } else {
+                element.textContent = text;
+            }
+        }
+    });
+}
+
+const setLanguage = (language) => {
+    applyTranslation(language)
+}
 
 const openTab = (numElem) => {
     var tabLinks = document.getElementsByClassName('tab-links')
@@ -17,7 +39,7 @@ const openTab = (numElem) => {
     tabContents[numElem].classList.add('active-content')
 }
 
-const animerComingSoon = () => {
+const animateComingSoon = () => {
     const textElements = document.getElementsByClassName("coming-soon");
     let compteurPoints = 0; 
 
@@ -33,13 +55,15 @@ const animerComingSoon = () => {
     
 }
 
-animerComingSoon();
-
-
-const viderCases = () => {
+const emptyCases = () => {
     var cases = formulaire.getElementsByTagName('input');
     
     for (var i = 0; i < cases.length; i++) {
         cases[i].value = '';
     }
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+    animateComingSoon();
+    setLanguage("en");
+});

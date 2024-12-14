@@ -8,33 +8,44 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.4.1/dist/email.min.js"></script>
+    <script src="languages.js"></script>
     <script src="script.js"></script>
 </head>
 <body>
 
     <div class="curseur-personnalise"></div>
 
-    <!--Barre de navigation-->
+    <!--Navigation Bar-->
     <div class="navigation-bar"> 
         <h1 class="titre-navBar">Hamza Oumeziane</h1>
         <nav class="liens">
-            <a href="#Home">Home</a>
-            <a href="#About">About</a>
-            <a href="#Services">Skills</a>
-            <a href="#Projects">Projects</a>
-            <a href="#Contact">Contact</a>
-        </nav>        
+            <a href="#Home" data-key="nav.home">Home</a>
+            <a href="#About" data-key="nav.about">About</a>
+            <a href="#Services" data-key="nav.skills">Skills</a>
+            <a href="#Projects" data-key="nav.projects">Projects</a>
+            <a href="#Contact" data-key="nav.contact">Contact</a>
+
+        </nav>  
+        <div class="language-switcher">
+            <a onclick="setLanguage('en')">
+                <img src="https://flagcdn.com/w40/us.png" alt="English" class="flag-icon">
+            </a>
+            <a onclick="setLanguage('fr')">
+                <img src="https://flagcdn.com/w40/fr.png" alt="Français" class="flag-icon">
+            </a>
+        </div>      
     </div>
 
+    <!--Home section-->
     <section class="home" id="Home">
         <div class="container-home">
-            <h1 class="titre-home">Welcome to My Portfolio!</h1>
-            <h3 class="text-home">Discover the journey of my creativity and innovation.</h3>
-            <a class="button-styled color-button1" href="#About">Discover More</a>
+            <h1 class="titre-home" data-key="home.welcome">Welcome to My Portfolio!</h1>
+            <h3 class="text-home" data-key="home.subtitle">Discover the journey of my creativity and innovation.</h3>
+            <a class="button-styled color-button1" href="#About" data-key="home.button">Discover More</a>
         </div>
-        
     </section>
 
+    <!--About section-->
     <section class="about" id="About">
         <div class="container-about">
             <div class="row-about">
@@ -42,18 +53,18 @@
                     <img src="./src/picture-about.png" alt="Hamza Oumeziane" class="photo-about">
                 </div>
                 <div class="about-col2">
-                    <h1 class="title-about">About Me</h1>
-                    <p> 
-                        Je m'appelle Hamza Oumeziane, et je suis un passionné de technologie et de développement logiciel. 
-                        Actuellement étudiant en Génie Logiciel au Collège de Bois-de-Boulogne, j'ai acquis des compétences
-                         solides en programmation, en développement d'applications web et mobiles, ainsi qu'en gestion de 
-                         bases de données. Mon parcours académique et mes expériences professionnelles m'ont permis de 
-                         développer un esprit analytique et une capacité à résoudre des problèmes complexes.
+                    <h1 class="title-about" data-key="about.title">About Me</h1>
+                    <p data-key="about.description"> 
+                        My name is Hamza Oumeziane, and I am passionate about technology and software development.
+                          Currently a Software Engineering student at Collège de Bois-de-Boulogne, I have acquired
+                          solid skills in programming, web and mobile application development, as well as database
+                          management. My academic journey and professional experiences have allowed me to develop
+                          analytical thinking and the ability to solve complex problems.
                     </p>
                     <div class="tab-titles">
-                        <p class="tab-links active-link" onclick="openTab(0)">Skills</p>
-                        <p class="tab-links" onclick="openTab(1)">Experience</p>
-                        <p class="tab-links" onclick="openTab(2)">Education</p>
+                        <p class="tab-links active-link" onclick="openTab(0)" data-key="about.tabs.skills">Skills</p>
+                        <p class="tab-links" onclick="openTab(1)" data-key="about.tabs.experience">Experience</p>
+                        <p class="tab-links" onclick="openTab(2)" data-key="about.tabs.education">Education</p>
                     </div>
 
                     <div class="tab-contents active-content" id="skills">
@@ -131,7 +142,7 @@
                                     </div>
                             </li>
                         </ul>
-                        <!-- Ajouter des icones pour scroll vers left or right avec des logos -->
+                        
                     </div>
 
                     <div class="tab-contents" id="experience">
@@ -156,10 +167,11 @@
         
     </section>
 
+    <!--Services section-->
     <section class="services" id="Services">
         <div class="coming-soon-container">
-            <h3 class="coming-soon">Services : Coming soon</h3>
-            <p>
+            <h3 class="coming-soon" data-key="services.comingSoon">Services : Coming soon</h3>
+            <p data-key="services.description">
                 Cette section est actuellement en cours de construction ! Je travaille activement pour 
                 vous offrir une expérience enrichissante et des fonctionnalités innovantes. Revenez bientôt pour 
                 découvrir du contenu passionnant et de nouvelles ressources. Merci de votre patience et de votre intérêt !
@@ -170,8 +182,8 @@
 
     <section class="projects" id="Projects">
         <div class="coming-soon-container">
-            <h3 class="coming-soon">Projects : Coming soon</h3>
-            <p>
+            <h3 class="coming-soon" data-key="projects.comingSoon">Projects : Coming soon</h3>
+            <p data-key="projects.description">
                 Cette section est actuellement en cours de construction ! Je travaille activement pour 
                 vous offrir une expérience enrichissante et des fonctionnalités innovantes. Revenez bientôt pour 
                 découvrir du contenu passionnant et de nouvelles ressources. Merci de votre patience et de votre intérêt !
@@ -180,28 +192,27 @@
         
     </section>
 
-
+    <!--Contact section-->
     <section class="contact" id="Contact">
         <form class="formulaire-contact" id="formulaire-contact" action="https://api.web3forms.com/submit" method="post">
-            <p class="simple-texte">GET IN TOUCH</p>
-            <h2>Contact me!</h2>
+            <p class="simple-texte" data-key="contact.getInTouch">GET IN TOUCH</p>
+            <h2 data-key="contact.contactMe">Contact me!</h2>
 
             <input type="hidden" name="access_key" value="4e723445-e1e8-4439-bd29-b37d52af4882">
 
-            <label >Name <span class="required">*</span></label>
+            <label data-key="contact.name">Name <span class="required">*</span></label>
             <input type="text" placeholder="Jane Smith" id="name" name="name" required>
-            <label >Email address <span class="required">*</span> </label>
+            <label data-key="contact.email">Email address <span class="required">*</span> </label>
             <input type="email" placeholder="example@example.com" id="email" name="email" required>
-            <label >Phone number </label>
+            <label data-key="contact.phone">Phone number </label>
             <input type="tel" placeholder="123 - 456 - 7891" id="phone-number" name="phone-number">
-            <label >Message</label>
+            <label data-key="contact.message">Message</label>
             <textarea placeholder="Message" name="message" id="message"></textarea>
-
-            
             <button type="submit" class="button-styled color-button2" onclick="viderCases()">Submit</button>
         </form>
+
         <div class="coordonnes">
-            <h3>Get in Touch</h3>
+            <h3 data-key="contact.getInTouch">Get in Touch</h3>
             <i class="fas fa-envelope"></i> <a href="mailto:houmeziane.contact@gmail.com" class="mail-adress">houmeziane.contact@gmail.com</a>
             <p><i class="fas fa-phone"></i> <a href="tel:+15148025816" class="mail-adress">+1 514 802 5816</a></p>
 
@@ -221,8 +232,8 @@
                 <p><i class="fas fa-map-marker-alt"></i> <a href="https://www.google.com/maps/place/Laval,+QC,+Canada" class="mail-adress" target="_blank">Laval, QC CA</a></p>
             </div>
             <h3>Curriculum Vitae</h3>
-            <a href="/src/hamza-oumeziane-cv.pdf" class="button-styled color-button2 short-button" download>Download CV (French)</a>
-            <a href="/src/resume-hamza-oumeziane.pdf" class="button-styled color-button2 short-button" download>Download CV (English)</a>
+            <a href="/src/hamza-oumeziane-cv.pdf" class="button-styled color-button2 short-button" download>Téléchargez mon CV (French)</a>
+            <a href="/src/resume-hamza-oumeziane.pdf" class="button-styled color-button2 short-button" download>Download my CV (English)</a>
         </div>
         
         
@@ -230,7 +241,7 @@
     
     <!-- Footer Section -->
     <footer class="footer">
-        <p>&copy; 2024 Hamza Oumeziane. All Rights Reserved.</p>
+        <p data-key="footer.rights">&copy; 2024 Hamza Oumeziane. All Rights Reserved.</p>
     </footer>
 </body>
 </html>

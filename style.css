@@ -11,7 +11,7 @@ body{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-left: 10%;
+  padding-left: 8%;
   padding-right: 12%;
   padding-top: 1%;
   padding-bottom: 5px;
@@ -24,12 +24,14 @@ body{
   display: flex;
   flex-direction: row;
   margin-right: 15%;
+  flex-wrap: nowrap;
 }
 
 .liens a{
   color: gray;
-  margin: 0 5%;
-  padding-bottom: 1.5%;
+  border: 1px solid black;
+  margin: 2%;
+  padding: 3%;
   font-size: 23px;
 }
 
@@ -45,7 +47,7 @@ li{
 
 .titre-navBar{
   font-family:Verdana, Geneva, Tahoma, sans-serif;
-  margin: 1% 0.5% 1% 2% ;
+  margin: .5% 0% .5% .5% ;
   color: black;
 }
   
@@ -406,4 +408,12 @@ textarea{
 @keyframes fadeInOut {
     0%, 100% { opacity: 1; }
     50% { opacity: 0.5; }
+}
+
+.flag-icon{
+  width: 30px;
+  height: 21px;
+  border-radius: 3px;
+  cursor: pointer;
+  margin: 4px;
 }
