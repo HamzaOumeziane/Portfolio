@@ -29,7 +29,6 @@ body{
 
 .liens a{
   color: gray;
-  border: 1px solid black;
   margin: 2%;
   padding: 3%;
   font-size: 23px;
@@ -364,8 +363,8 @@ textarea{
   }
 
   .skill-icons img{
-    width: 30px;
-    height: 30px;
+    width: 45px;
+    height: 45px;
   }
 
   .skill-text span{
