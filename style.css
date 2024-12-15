@@ -416,3 +416,114 @@ textarea{
   cursor: pointer;
   margin: 4px;
 }
+
+
+/* Section Services */
+.services {
+  background-color: #f9f9f9;
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.services-title {
+  font-size: 60px;
+  margin-bottom: 40px;
+  color: white;
+  font-weight: bold;
+}
+
+.services-container {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  margin: 0 auto;
+  flex-direction: column;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 25px;
+  border: 3px solid #d51d81;
+  height: 80vh;
+  width: 80vw;
+  position: relative;
+}
+
+
+#services-cards {
+  display: flex;
+  gap: 20px;
+  transition: transform 0.5s ease-in-out;
+  justify-items: center;
+  text-align: center;
+  height: 60%;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+/* Individual Service Cards */
+.card {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  width: calc(100% / 3 - 40px);
+  height: 100%;
+  
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card h2 {
+  font-size: 1.5rem;
+  color: #31004a;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.card ul {
+  margin: 0;
+}
+
+.card ul li {
+  font-size: 1rem;
+  list-style:circle;
+  color: #555;
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+.left-btn, .right-btn {
+  background-color: #31004a;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 2rem;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  z-index: 10;
+}
+
+.left-btn {
+  left: 10px;
+}
+
+.right-btn {
+  right: 10px;
+}
+
+.left-btn:hover, .right-btn:hover {
+  background-color: #51116c;
+}

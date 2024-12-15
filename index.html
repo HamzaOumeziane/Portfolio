@@ -19,11 +19,11 @@
     <div class="navigation-bar"> 
         <h1 class="titre-navBar">Hamza Oumeziane</h1>
         <nav class="liens">
-            <a href="#Home" data-key="nav.home">Home</a>
-            <a href="#About" data-key="nav.about">About</a>
-            <a href="#Services" data-key="nav.skills">Skills</a>
-            <a href="#Projects" data-key="nav.projects">Projects</a>
-            <a href="#Contact" data-key="nav.contact">Contact</a>
+            <a href="#Home" data-key="nav.home"></a>
+            <a href="#About" data-key="nav.about"></a>
+            <a href="#Services" data-key="nav.services"></a>
+            <a href="#Projects" data-key="nav.projects"></a>
+            <a href="#Contact" data-key="nav.contact"></a>
 
         </nav>  
         <div class="language-switcher">
@@ -33,15 +33,19 @@
             <a onclick="setLanguage('fr')">
                 <img src="https://flagcdn.com/w40/fr.png" alt="Français" class="flag-icon">
             </a>
+            <a href="https://github.com/HamzaOumeziane">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" alt="github-icon" class="flag-icon"/>
+            </a>
+
         </div>      
     </div>
 
     <!--Home section-->
     <section class="home" id="Home">
         <div class="container-home">
-            <h1 class="titre-home" data-key="home.welcome">Welcome to My Portfolio!</h1>
-            <h3 class="text-home" data-key="home.subtitle">Discover the journey of my creativity and innovation.</h3>
-            <a class="button-styled color-button1" href="#About" data-key="home.button">Discover More</a>
+            <h1 class="titre-home" data-key="home.welcome"></h1>
+            <h3 class="text-home" data-key="home.subtitle"></h3>
+            <a class="button-styled color-button1" href="#About" data-key="home.button"></a>
         </div>
     </section>
 
@@ -54,17 +58,11 @@
                 </div>
                 <div class="about-col2">
                     <h1 class="title-about" data-key="about.title">About Me</h1>
-                    <p data-key="about.description"> 
-                        My name is Hamza Oumeziane, and I am passionate about technology and software development.
-                          Currently a Software Engineering student at Collège de Bois-de-Boulogne, I have acquired
-                          solid skills in programming, web and mobile application development, as well as database
-                          management. My academic journey and professional experiences have allowed me to develop
-                          analytical thinking and the ability to solve complex problems.
-                    </p>
+                    <p data-key="about.description"></p>
                     <div class="tab-titles">
-                        <p class="tab-links active-link" onclick="openTab(0)" data-key="about.tabs.skills">Skills</p>
-                        <p class="tab-links" onclick="openTab(1)" data-key="about.tabs.experience">Experience</p>
-                        <p class="tab-links" onclick="openTab(2)" data-key="about.tabs.education">Education</p>
+                        <p class="tab-links active-link" onclick="openTab(0)" data-key="about.tabs.skills"></p>
+                        <p class="tab-links" onclick="openTab(1)" data-key="about.tabs.experience"></p>
+                        <p class="tab-links" onclick="openTab(2)" data-key="about.tabs.education"></p>
                     </div>
 
                     <div class="tab-contents active-content" id="skills">
@@ -150,13 +148,14 @@
                             <li>
                                 <div class="skill-item">
                                     <div class="skill-text">
-                                        <span>Tools & Methodologies</span><br> Docker, GitHub, Agile (Scrum, Kanban), DevOps
+                                        <span>Tools & Methodologies</span><br> Docker, GitHub, Agile (Scrum, Kanban), DevOps, Jira
                                     </div>
                                     <div class="skill-icons">
                                         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg" alt="docker-icon"/>                     
                                         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" alt="github-icon"/>
                                         <img src="src/technologies/agile-svgrepo-com.svg" alt="agile-icon" class="methodologies">
                                         <img src="src/technologies/dev-ops-solid-svgrepo-com.svg" alt="devops-icon" class="methodologies">
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jira/jira-original.svg" alt="jira-icon"/>
                                     </div>
                             </li>
                         </ul>
@@ -187,25 +186,21 @@
 
     <!--Services section-->
     <section class="services" id="Services">
-        <div class="coming-soon-container">
-            <h3 class="coming-soon" data-key="services.comingSoon">Services : Coming soon</h3>
-            <p data-key="services.description">
-                Cette section est actuellement en cours de construction ! Je travaille activement pour 
-                vous offrir une expérience enrichissante et des fonctionnalités innovantes. Revenez bientôt pour 
-                découvrir du contenu passionnant et de nouvelles ressources. Merci de votre patience et de votre intérêt !
-            </p>
-        </div>
         
+        <div class="services-container">
+            <h1 class="services-title" data-key="services.title"></h1>
+            <button class="left-btn" onclick="scrollServices(1)">&#9664;</button>
+            <div id="services-cards">
+                
+            </div>
+            <button class="right-btn" onclick="scrollServices(-1)">&#9654;</button>
+        </div>
     </section>
 
     <section class="projects" id="Projects">
         <div class="coming-soon-container">
             <h3 class="coming-soon" data-key="projects.comingSoon">Projects : Coming soon</h3>
-            <p data-key="projects.description">
-                Cette section est actuellement en cours de construction ! Je travaille activement pour 
-                vous offrir une expérience enrichissante et des fonctionnalités innovantes. Revenez bientôt pour 
-                découvrir du contenu passionnant et de nouvelles ressources. Merci de votre patience et de votre intérêt !
-            </p>
+            <p data-key="projects.description"></p>
         </div>
         
     </section>

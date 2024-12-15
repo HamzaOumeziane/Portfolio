@@ -1,3 +1,6 @@
+let currentIndex = 0;
+let currentLanguage = "en"
+
 const applyTranslation = (language) => {
     document.querySelectorAll("[data-key]").forEach(element => {
         const key = element.getAttribute("data-key");
@@ -19,7 +22,9 @@ const applyTranslation = (language) => {
 }
 
 const setLanguage = (language) => {
+    currentLanguage = language
     applyTranslation(language)
+    renderCards()
 }
 
 const openTab = (numElem) => {
@@ -63,7 +68,47 @@ const emptyCases = () => {
     }
 }
 
+function getServices(){
+    return languages[currentLanguage].services.items
+}
+
+
+function renderCards() {
+    const track = document.getElementById("services-cards");
+    track.innerHTML = "";
+
+    const services = getServices()
+
+    for (let i = 0; i < 3; i++) {
+        const cardIndex = (currentIndex + i) % services.length;
+        const service = services[cardIndex];
+
+        const card = document.createElement("div");
+        card.className = "card";
+        card.innerHTML = `
+            <h2>${service.title}</h2>
+            <ul>
+                ${service.points.map(point => {
+                    if (Array.isArray(point)) {
+                        return `<ul >${point.map(subPoint => `<li style="color:#555; font-weight:medium; list-style:circle; font-size:15px; line-height:1.5; margin-left:0">${subPoint}</li>`).join("")}</ul>`;
+                    }
+                    return `<li style="color:black; font-weight:bold; list-style:disc; font-size:18px; line-height:1.5">${point}</li>`;
+                }).join("")}
+            </ul>
+        `;
+        track.appendChild(card);
+    }
+}
+
+// Scroll the carousel
+function scrollServices(direction) {
+    const services = getServices()
+    currentIndex = (currentIndex + direction + services.length) % services.length; // Circular update
+    renderCards();
+}
+
 document.addEventListener("DOMContentLoaded", () => {
     animateComingSoon();
     setLanguage("en");
+    renderCards()
 });
