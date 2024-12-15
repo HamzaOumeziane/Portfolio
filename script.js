@@ -111,4 +111,22 @@ document.addEventListener("DOMContentLoaded", () => {
     animateComingSoon();
     setLanguage("en");
     renderCards()
+
+
+    const text = languages[currentLanguage].home.welcome;
+    const titreHome = document.querySelector(".titre-home");
+    let index = 0;
+    titreHome.textContent = ""
+
+    function typeWriter() {
+        if (index < text.length) {
+        titreHome.textContent += text.charAt(index);
+        index++;
+        setTimeout(typeWriter, 100);
+        } else {
+        titreHome.style.borderRight = "none";
+        }
+    }
+
+  typeWriter();
 });

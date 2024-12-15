@@ -157,14 +157,29 @@ textarea{
     transition: background-color 0.3s ease, border-color 0.3 ease;
   }
 
-  .titre-home{
-    font-size: 70px;
-    color: white;
+  @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&display=swap');
+  .titre-home {
+    font-family: 'Fira Code', monospace; /* Coding font */
+    color: #ffffff;
+    font-size: 50px;
+    border-right: 2px solid rgba(255, 255, 255, 0.75);
+    white-space: nowrap;
+    overflow: hidden;
   }
+  @keyframes blink {
+    50% {
+      border-color: transparent;
+    }
+  }
+  .titre-home {
+    animation: blink 0.5s step-end infinite;
+  }
+
   .text-home{
     font-size: 25px;
     color: white;
   }
+
 
   h1{
     font-size: 50px;
