@@ -165,14 +165,12 @@ textarea{
     border-right: 2px solid rgba(255, 255, 255, 0.75);
     white-space: nowrap;
     overflow: hidden;
+    animation: blink 0.5s step-end infinite;
   }
   @keyframes blink {
     50% {
       border-color: transparent;
     }
-  }
-  .titre-home {
-    animation: blink 0.5s step-end infinite;
   }
 
   .text-home{

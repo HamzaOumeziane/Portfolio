@@ -107,26 +107,33 @@ function scrollServices(direction) {
     renderCards();
 }
 
+function typeWriter(text, targetElement){
+    index = 0
+    isDeleting = false
+    function write() {
+        if (!isDeleting && index < text.length) {
+            targetElement.textContent += text.charAt(index);
+            index++;
+            setTimeout(write, 100);
+        } else if (isDeleting && index > 0) {
+            targetElement.textContent = text.substring(0, index - 1);
+            index--;
+            setTimeout(write, 50);
+        } else {
+            isDeleting = !isDeleting;
+            setTimeout(write, 500);
+        }
+    }
+
+    targetElement.textContent = "";
+    targetElement.style.borderRight = "2px solid rgba(255, 255, 255, 0.75)";
+    write()
+}
+
 document.addEventListener("DOMContentLoaded", () => {
     animateComingSoon();
     setLanguage("en");
     renderCards()
 
-
-    const text = languages[currentLanguage].home.welcome;
-    const titreHome = document.querySelector(".titre-home");
-    let index = 0;
-    titreHome.textContent = ""
-
-    function typeWriter() {
-        if (index < text.length) {
-        titreHome.textContent += text.charAt(index);
-        index++;
-        setTimeout(typeWriter, 100);
-        } else {
-        titreHome.style.borderRight = "none";
-        }
-    }
-
-  typeWriter();
+    typeWriter(languages[currentLanguage].home.welcome, document.querySelector(".titre-home"));
 });
