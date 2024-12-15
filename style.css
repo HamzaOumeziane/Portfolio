@@ -12,7 +12,7 @@ body{
   justify-content: space-between;
   align-items: center;
   padding-left: 8%;
-  padding-right: 12%;
+  padding-right: 8%;
   padding-top: 1%;
   padding-bottom: 5px;
   background-color: white;
@@ -48,6 +48,7 @@ li{
   font-family:Verdana, Geneva, Tahoma, sans-serif;
   margin: .5% 0% .5% .5% ;
   color: black;
+  font-size: 45px;
 }
   
   html{
@@ -513,7 +514,7 @@ textarea{
 }
 
 .left-btn, .right-btn {
-  background-color: #31004a;
+  background-color: #d51d81;
   color: white;
   border: none;
   cursor: pointer;
