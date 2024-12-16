@@ -1,6 +1,8 @@
 let currentIndex = 0;
 let currentLanguage = "en"
 
+
+
 const applyTranslation = (language) => {
     document.querySelectorAll("[data-key]").forEach(element => {
         const key = element.getAttribute("data-key");
@@ -100,10 +102,10 @@ function renderCards() {
     }
 }
 
-// Scroll the carousel
+
 function scrollServices(direction) {
     const services = getServices()
-    currentIndex = (currentIndex + direction + services.length) % services.length; // Circular update
+    currentIndex = (currentIndex + direction + services.length) % services.length;
     renderCards();
 }
 
@@ -131,9 +133,23 @@ function typeWriter(text, targetElement){
 }
 
 document.addEventListener("DOMContentLoaded", () => {
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            console.log(entry)
+            if(entry.isIntersecting){
+                entry.target.classList.add('show')
+            }else{
+                entry.target.classList.remove('show')
+            }
+        })
+    })
+    
+    const hiddenElements = document.querySelectorAll('.hidden')
+    hiddenElements.forEach((el) => observer.observe(el))
+    
     animateComingSoon();
     setLanguage("en");
     renderCards()
-
+    
     typeWriter(languages[currentLanguage].home.welcome, document.querySelector(".titre-home"));
 });

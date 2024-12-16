@@ -111,10 +111,36 @@ const languages = {
             ]
         },
         projects: {
-            comingSoon: "Projects : Coming soon",
-            description: `This section is currently under construction! I am actively working to
-                          provide you with an enriching experience and innovative features. Come back soon to
-                          discover exciting content and new resources. Thank you for your patience and interest!`
+            title: "Latest Projects",
+            items: [
+                {
+                    title: "Loaf AI - Excel Extension",
+                    type: "Team Project",
+                    description: `Development of a MERN application for Excel, integrating AI features to assist users.
+                                  Key functionalities include an interactive chatbot linked to the book 'An Introduction to Business Administration,' 
+                                  data extraction and standardization, formula generation, an Excel assistant, and a Stripe-based payment system.`,
+                    technologies: "Technologies: React, Node.js, Express, TypeScript.",
+                    link: "https://github.com/BdeB-Org/projet-de-session-equipe_loaf.git"
+                },
+                {
+                    title: "ExerDex - Mobile Application",
+                    type: "Team Project",
+                    description: `An Android application to manage and track workouts and exercises. Key functionalities include user registration, 
+                                  tracking completed exercises, workout templates, an AI assistant generating personalized exercises, 
+                                  a quick search feature, and profile management.`,
+                    technologies: "Technologies: Kotlin.",
+                    link: "https://github.com/HamzaOumeziane/Exerdex-Mobile-App.git"
+                },
+                {
+                    title: "Energymize - Full Stack Web Application",
+                    type: "Team Project",
+                    description: `A web platform allowing users to create and follow personalized workout plans. 
+                                  Features include quick registration and login, plan generation based on preferences, 
+                                  an interactive calendar for tracking sessions, profile management, and training customization.`,
+                    technologies: "Technologies: EJS, Node.js, Express, Bootstrap, JavaScript.",
+                    link: "https://github.com/HamzaOumeziane/Energymize-fullstack-app.git"
+                }
+            ]
         },
         contact: {
             getInTouch: "GET IN TOUCH",
@@ -248,10 +274,36 @@ const languages = {
             ]
         },
         projects: {
-            comingSoon: "Projets : Bientôt disponible",
-            description: `Cette section est actuellement en cours de construction ! Je travaille activement pour
-                          vous offrir une expérience enrichissante et des fonctionnalités innovantes. Revenez bientôt pour
-                          découvrir du contenu passionnant et de nouvelles ressources. Merci de votre patience et de votre intérêt !`
+            title: "Récents Projets",
+            items: [
+                {
+                    title: "Loaf AI - Extension Excel",
+                    type: "Projet en équipe",
+                    description: `Développement d'une application MERN fonctionnant sur Excel, intégrant des fonctionnalités IA pour aider les utilisateurs.
+                                  Principales fonctionnalités : Chatbot interactif lié au livre 'Une introduction à l’administration des affaires', 
+                                  extraction et standardisation de données, génération de formules, assistant Excel et système de paiement avec Stripe.`,
+                    technologies: "Technologies : React, Node.js, Express, TypeScript.",
+                    link: "https://github.com/BdeB-Org/projet-de-session-equipe_loaf.git"
+                },
+                {
+                    title: "ExerDex - Application Mobile",
+                    type: "Projet en équipe",
+                    description: `Application Android pour la gestion et le suivi des entraînements et exercices. 
+                                  Fonctionnalités principales : inscription, suivi des exercices réalisés, modèles d'entraînement, 
+                                  assistant IA pour des exercices personnalisés, recherche rapide et gestion de profil utilisateur.`,
+                    technologies: "Technologies : Kotlin.",
+                    link: "https://github.com/HamzaOumeziane/Exerdex-Mobile-App.git"
+                },
+                {
+                    title: "Energymize - Application Web Full Stack",
+                    type: "Projet en équipe",
+                    description: `Plateforme web permettant de créer et suivre des plans d'entraînement personnalisés. 
+                                  Fonctionnalités principales : inscription rapide, génération de plans d'entraînement adaptés, 
+                                  calendrier interactif pour le suivi, gestion de profil utilisateur et personnalisation des entraînements.`,
+                    technologies: "Technologies : EJS, Node.js, Express, Bootstrap, JavaScript.",
+                    link: "https://github.com/HamzaOumeziane/Energymize-fullstack-app.git"
+                }
+            ]
         },
         contact: {
             getInTouch: "RESTEZ EN CONTACT",

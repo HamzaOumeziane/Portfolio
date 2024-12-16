@@ -6,6 +6,8 @@ body{
     overflow-x: hidden;
 }
 
+
+
 .navigation-bar {
   margin-top:0;
   display: flex;
@@ -15,7 +17,10 @@ body{
   padding-right: 8%;
   padding-top: 1%;
   padding-bottom: 5px;
-  background-color: white;
+  background-size: cover;
+  background-image: url('./src/giphy.gif');
+  background-position: center;
+
 }
 
 
@@ -28,7 +33,7 @@ body{
 }
 
 .liens a{
-  color: gray;
+  color: white;
   margin: 2%;
   padding: 3%;
   font-size: 23px;
@@ -36,8 +41,8 @@ body{
 
 .liens a:hover{
   transition: 0.25s ease-in-out;
-  color: purple;
-  border-bottom: 1px solid purple;
+  color: #d51d81;
+  border-bottom: 1px solid #d51d81;
 }
 
 li{
@@ -45,9 +50,9 @@ li{
 }
 
 .titre-navBar{
-  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  font-family:'Fira Code', monospace;
   margin: .5% 0% .5% .5% ;
-  color: black;
+  color: white;
   font-size: 45px;
 }
   
@@ -72,13 +77,20 @@ li{
     flex-direction: row;
       padding: 50px;
     gap: 100px;
-
   }
+
+  section{
+    display: grid;
+    place-items: center;
+    align-content: center;
+    min-height: 100vh;
+  }
+
   section.home, section.about, section.services, section.projects{
     height: 100vh;
     width: 100%;
-    background-image: url('./src/giphy.gif');
     background-size: cover;
+    background-image: url('./src/giphy.gif');
     background-position: center;
     opacity: 1;
     border-top: 5px solid white;
@@ -88,6 +100,124 @@ li{
     height: 100vh;
     width: 100%;
   }
+
+  section.projects{
+    display: flex;
+    flex-direction: column;
+    
+  }
+  section.projects h2{
+    margin-bottom: .5rem;
+    margin-top: 0;
+    color: white;
+    font-size: 45px;
+  }
+
+  .projects-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    gap: 2.5rem;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 25px;
+    border: 3px solid #d51d81;
+    margin: 2%;
+    padding: 2%;
+    height: 70%;
+    overflow-x: auto;
+
+  }
+
+  .projects-container .project-box{
+    position: relative;
+    border-radius: 2rem;
+    box-shadow: 0 0 1rem #d51d81;
+    overflow: hidden;
+    display: flex;
+  }
+
+  .project-box img{
+    width: 100%; 
+    height: 100%; 
+    transition: transform 0.5s ease;
+    opacity: 0.7;
+  }
+
+  .project-box:hover img{
+   transform: scale(1.1); 
+  }
+ 
+  .project-box .project-layer{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(49, 0, 74, 0.85);
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    flex-direction: column;
+    text-align: center;
+    transform: translateY(100%); 
+    transition: transform 0.5s ease-in-out; 
+    z-index: 2; 
+    color: white;
+    overflow-y:scroll;
+  }
+
+  .project-box:hover .project-layer{
+    transform: translateY(0);
+  }
+
+  .project-layer h4{
+    font-size: 1.5rem;
+    color: #fff;
+    text-align: center;
+    align-items: center;
+    font-family: 'Courier New', Courier, monospace;
+    margin-top: 12rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  .project-layer p{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    color: #fff;
+    line-height: 1.5;
+  }
+
+  .project-layer a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    background: #ddd;
+  }
+
+  .project-layer a i{
+    font-size: 2rem;
+    color: #31004a;
+  }
+
+  .project-layer i {
+    font-size: 2rem;
+    color: #fff;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1rem;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+.project-layer i:hover {
+  transform: scale(1.2);
+}
+
 
 
   .formulaire-contact {
@@ -137,16 +267,16 @@ textarea{
 }
 
 .color-button2:hover{
-  background-color: #31004a;
+  background-color: #d51d81;
   border: 1px solid white;
-  transition: 0.1s ease-in-out;
+  transition: 0.5s ease-in-out;
   color: white;
 }
 
 .color-button1:hover{
-  background-color: #31004a;
+  background-color: #d51d81;
   border: 1px solid white;
-  transition: 0.1s ease-in-out;
+  transition: 0.5s ease-in-out;
   color: white;
 }
 
@@ -160,7 +290,7 @@ textarea{
 
   @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&display=swap');
   .titre-home {
-    font-family: 'Fira Code', monospace; /* Coding font */
+    font-family: 'Fira Code', monospace;
     color: #ffffff;
     font-size: 50px;
     border-right: 2px solid rgba(255, 255, 255, 0.75);
@@ -270,6 +400,7 @@ textarea{
   .about-col1{
     flex-basis: 35%;
     margin-left: 5%;
+    
   }
   .about-col2{
     flex-basis: 55%;
@@ -540,4 +671,15 @@ textarea{
 
 .left-btn:hover, .right-btn:hover {
   background-color: #51116c;
+}
+
+.hidden {
+  opacity: 0;
+  transform: translateX(0); 
+  transition: opacity 0.8s ease, transform 0.8s cubic-bezier(0.17, 0.67, 0.83, 0.67);
+}
+
+.show {
+  opacity: 1;
+  transform: translateX(0);
 }

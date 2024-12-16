@@ -41,7 +41,7 @@
     </div>
 
     <!--Home section-->
-    <section class="home" id="Home">
+    <section class="home hidden" id="Home">
         <div class="container-home">
             <h1 class="titre-home" data-key="home.welcome"></h1>
             <h3 class="text-home" data-key="home.subtitle"></h3>
@@ -50,7 +50,7 @@
     </section>
 
     <!--About section-->
-    <section class="about" id="About">
+    <section class="about hidden" id="About">
         <div class="container-about">
             <div class="row-about">
                 <div class="about-col1">
@@ -185,7 +185,7 @@
     </section>
 
     <!--Services section-->
-    <section class="services" id="Services">
+    <section class="services hidden" id="Services">
         
         <div class="services-container">
             <h1 class="services-title" data-key="services.title"></h1>
@@ -197,16 +197,56 @@
         </div>
     </section>
 
-    <section class="projects" id="Projects">
-        <div class="coming-soon-container">
-            <h3 class="coming-soon" data-key="projects.comingSoon">Projects : Coming soon</h3>
-            <p data-key="projects.description"></p>
+    <!--Projects section-->
+    <section class="projects hidden" id="Projects">
+        <h2 class="projects-title" data-key="projects.title"></h2>
+        <div class="projects-container">
+            <div class="project-box">
+                <img src="src/projects/logo_big.png" alt="">
+                <div class="project-layer">
+                    <h4 data-key="projects.items.0.title"></h4>
+                    <p data-key="projects.items.0.type"></p>
+                    <p data-key="projects.items.0.description"></p>
+                    <p data-key="projects.items.0.technologies"></p>
+                    <a href="https://github.com/BdeB-Org/projet-de-session-equipe_loaf.git">
+                        <i class="fa-solid fa-share-from-square"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="project-box">
+                <img src="src/projects/exerdex.jpg" alt="">
+                <div class="project-layer">
+                    <h4 data-key="projects.items.1.title"></h4>
+                    <p data-key="projects.items.1.type"></p>
+                    <p data-key="projects.items.1.description"></p>
+                    <p data-key="projects.items.1.technologies"></p>
+                    <a href="https://github.com/HamzaOumeziane/Exerdex-Mobile-App.git">
+                        <i class="fa-solid fa-share-from-square"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="project-box">
+                <img src="src/projects/energymize.png" alt="">
+                <div class="project-layer">
+                    <h4 data-key="projects.items.2.title"></h4>
+                    <p data-key="projects.items.2.type"></p>
+                    <p data-key="projects.items.2.description"></p>
+                    <p data-key="projects.items.2.technologies"></p>
+                
+                    <a href="https://github.com/HamzaOumeziane/Energymize-fullstack-app.git">
+                        <i class="fa-solid fa-share-from-square"></i>
+                    </a>
+                </div>
+            </div>
+           
         </div>
         
     </section>
 
     <!--Contact section-->
-    <section class="contact" id="Contact">
+    <section class="contact hidden" id="Contact">
         <form class="formulaire-contact" id="formulaire-contact" action="https://api.web3forms.com/submit" method="post">
             <p class="simple-texte" data-key="contact.getInTouch">GET IN TOUCH</p>
             <h2 data-key="contact.contactMe">Contact me!</h2>
